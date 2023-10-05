@@ -21,7 +21,7 @@ import { HiOutlineKey } from "react-icons/hi";
 import { BsFilter } from "react-icons/bs";
 import { TfiArrowCircleRight } from "react-icons/tfi";
 import { Dispatch, FC, SetStateAction, useState } from "react";
-import Modal from "./modals/Modal";
+import Modal from "@/app/components/modals/Modal";
 
 interface IFilters {
   setSelectedCategory: Dispatch<SetStateAction<string>>;
