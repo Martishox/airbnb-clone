@@ -32,22 +32,22 @@ const Modal: FC<PropsWithChildren<IModalProps>> = ({
     [onClose]
   );
 
-  useEffect(() => {
-    const modal = ref.current;
+  // useEffect(() => {
+  //   const modal = ref.current;
 
-    if (modal) {
-      disableBodyScroll(modal, {
-        reserveScrollBarGap: true,
-        allowTouchMove: () => true,
-      });
+  //   if (modal) {
+  //     disableBodyScroll(modal, {
+  //       reserveScrollBarGap: true,
+  //       allowTouchMove: () => true,
+  //     });
 
-      window.addEventListener("keydown", handleKey);
-    }
-    return () => {
-      clearAllBodyScrollLocks();
-      window.removeEventListener("keydown", handleKey);
-    };
-  }, [handleKey]);
+  //     window.addEventListener("keydown", handleKey);
+  //   }
+  //   return () => {
+  //     clearAllBodyScrollLocks();
+  //     window.removeEventListener("keydown", handleKey);
+  //   };
+  // }, [handleKey]);
 
   return (
     <div className="fixed bg-black bg-opacity-40 flex items-start md:items-center inset-0 z-60 justify-center">
