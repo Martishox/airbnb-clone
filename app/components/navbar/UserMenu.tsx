@@ -6,20 +6,11 @@ import { FaUserCircle } from "react-icons/fa";
 import { signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
-// import useLoginModal from "@/app/hooks/useLoginModal";
-// import useRegisterModal from "@/app/hooks/useRegisterModal";
-// import useRentModal from "@/app/hooks/useRentModal";
-// import { SafeUser } from "@/app/types";
-
 import MenuItem from "./MenuItem";
 import { BiGlobe } from "react-icons/bi";
 
-const UserMenu: FC = ({ currentUser }) => {
+const UserMenu: FC = () => {
   const router = useRouter();
-
-  //const loginModal = useLoginModal();
-  //const registerModal = useRegisterModal();
-  //const rentModal = useRentModal();
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -91,42 +82,7 @@ const UserMenu: FC = ({ currentUser }) => {
             top-12 
             text-sm
           ">
-          <div className="flex flex-col cursor-pointer">
-            {currentUser ? (
-              <>
-                <MenuItem
-                  label="My trips"
-                  onClick={() => router.push("/trips")}
-                />
-                <MenuItem
-                  label="My favorites"
-                  onClick={() => router.push("/favorites")}
-                />
-                <MenuItem
-                  label="My reservations"
-                  onClick={() => router.push("/reservations")}
-                />
-                <MenuItem
-                  label="My properties"
-                  onClick={() => router.push("/properties")}
-                />
-                <MenuItem
-                  label="Airbnb your home"
-                  //onClick={rentModal.onOpen}
-                />
-                <hr />
-                <MenuItem label="Logout" onClick={() => signOut()} />
-              </>
-            ) : (
-              <>
-                <MenuItem label="Login" onClick={loginModal.onOpen} />
-                <MenuItem
-                  label="Sign up"
-                  onClick={registerModal.onOpen}
-                />
-              </>
-            )}
-          </div>
+          <div className="flex flex-col cursor-pointer"></div>
         </div>
       )}
     </div>
