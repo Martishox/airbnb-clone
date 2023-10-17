@@ -21,7 +21,7 @@ import { HiOutlineKey } from "react-icons/hi";
 import { BsFilter } from "react-icons/bs";
 import { TfiArrowCircleRight } from "react-icons/tfi";
 import { Dispatch, FC, SetStateAction, useState } from "react";
-import Modal from "@/app/components/modals/Modal";
+//import Modal from "@/app/components/modals/Modal";
 
 interface IFilters {
   setSelectedCategory: Dispatch<SetStateAction<string>>;
@@ -107,12 +107,12 @@ const Filters: FC<IFilters> = ({
               />
             ))}
             <button onClick={openModal}>Open Modal</button>
-            {isOpen && (
+            {/* {isOpen && (
               <Modal onClose={closeModal}>
                 <h2>Modal Content</h2>
                 <p>This is the content of the modal.</p>
               </Modal>
-            )}
+            )} */}
           </div>
 
           <div className="flex items-center justify-end mr-5">
