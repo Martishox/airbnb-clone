@@ -68,6 +68,7 @@ const Map: FC<IMapProps> = ({ selectedCategory }) => {
           <ZoomControl position="topright" />
           {filteredProperties.map((property) => (
             <Marker
+              key={"filtered-item"}
               position={[
                 property.location.latitude,
                 property.location.longitude,

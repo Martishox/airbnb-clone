@@ -30,7 +30,7 @@ export const usePropertiesData = () => {
       setProperties(fetchedProperties);
     };
     getProperties();
-  }, []);
+  });
 
   return { properties };
 };
